@@ -1,0 +1,23 @@
+
+@media screen {
+
+
+    button {
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-family: Verdana, sans-serif;
+
+    }
+
+    p{
+        color: dimgray;
+    }
+}
