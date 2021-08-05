@@ -7,57 +7,67 @@
     </head>
 
     <script>
-        function bird00() {
-            var output = 'Pardalote by fir0002 (CC-by-NC)';
+
+        function swapImg(newImg, newText) {
+            var output = newText;
             var element = document.getElementById('birdText');
             element.innerHTML = output;
-            birdImg.src ="http://www.outgrabe.net/bird00.jpg";
+            birdImg.src = newImg;
         }
-        function bird01() {
-            var output = 'Purple swamp hen by Toby Hudson (CC-by-SA)';
-            var element = document.getElementById('birdText');
-            element.innerHTML = output;
-            birdImg.src ="http://www.outgrabe.net/bird01.jpg"
-        }
-        function bird02() {
-            var output = 'White-headed Stilt by JJ Harrison (CC-by-SA)';
-            var element = document.getElementById('birdText');
-            element.innerHTML = output;
-            birdImg.src ="http://www.outgrabe.net/bird02.jpg";
-        }
-        function bird03() {
-            var output = 'Inland Thornbill by Peter Jacobs (CC-by-SA)';
-            var element = document.getElementById('birdText');
-            element.innerHTML = output;
-            birdImg.src="http://www.outgrabe.net/bird03.jpg";
-        }
-        function bird04() {
-            var output = 'Rose Robin by JJ Harrison (CC-by-SA)';
-            var element = document.getElementById('birdText');
-            element.innerHTML = output;
-            birdImg.src ="http://www.outgrabe.net/bird04.jpg";
+
+        function randomBird() {
+           
+            const imgArray = [
+                "http://www.outgrabe.net/bird00.jpg",  
+                "http://www.outgrabe.net/bird01.jpg",
+                "http://www.outgrabe.net/bird02.jpg",
+                "http://www.outgrabe.net/bird03.jpg",
+                "http://www.outgrabe.net/bird04.jpg",             
+
+        ];
+
+            const txtArray = [
+                "Pardalote by fir0002 (CC-by-NC)",
+                "Purple swamp hen by Toby Hudson (CC-by-SA)",
+                "White-headed Stilt by JJ Harrison (CC-by-SA)",
+                "Inland Thornbill by Peter Jacobs (CC-by-SA)",
+                "Rose Robin by JJ Harrison (CC-by-SA)"
+        ];
+
+        var x = Math.floor(Math.random() * 4);
+        var output = txtArray[x];
+        var element = document.getElementById('birdText');
+        element.innerHTML = output;
+        birdImg.src = imgArray[x];
+
         }
     </script>
 
     <body>
         <h1><b>Australian Birds</b></h1>
 
-        <button href="#" onclick="bird00();">Pardalote</button>
+        <button href="#" onclick="swapImg('http://www.outgrabe.net/bird00.jpg','Pardalote by fir0002 (CC-by-NC)');">Pardalote</button>
 
-        <button href="#" onclick="bird01();">Purple Swamp Hen</button>
+        <button href="#" onclick="swapImg('http://www.outgrabe.net/bird01.jpg','Purple swamp hen by Toby Hudson (CC-by-SA)');">Purple Swamp Hen</button>
 
-        <button href="#" onclick="bird02();">White-headed Stilt</button>
+        <button href="#" onclick="swapImg('http://www.outgrabe.net/bird02.jpg','White-headed Stilt by JJ Harrison (CC-by-SA)');">White-headed Stilt</button>
 
-        <button href="#" onclick="bird03();">Inland Thornbill</button>
+        <button href="#" onclick="swapImg('http://www.outgrabe.net/bird03.jpg','Inland Thornbill by Peter Jacobs (CC-by-SA)');">Inland Thornbill</button>
 
-        <button href="#" onclick="bird04();">Rose Robin</button>
+        <button href="#" onclick="swapImg('http://www.outgrabe.net/bird04.jpg','Rose Robin by JJ Harrison (CC-by-SA)');">Rose Robin</button>
 
-    <br>
+
+
+    <br>    
         
     <img id="birdImg" src="http://www.outgrabe.net/bird00.jpg" />
 
     <br>
     <p id="birdText" >Pardalote by fir0002 (CC-by-NC)</p>
+    <br>
+    <p>Bonus button!</p>
+
+    <button href="#" onclick="randomBird();">Random</button>
 
     </body>
 </html>
